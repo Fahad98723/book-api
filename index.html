@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <!-- bootstrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: black;
+        }
+        .card-footer:hover{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <main class="container mt-4">
+        <h1 class="text-center text-light">Search Your <span class="text-warning">Books Here</span></h1>
+
+        <!-- search input --> 
+
+        <div class="input-group my-3 w-75 mx-auto">
+            <input id="book-name" type="text" class="form-control fs-5" placeholder="Write Book Name"  aria-describedby="button-addon2">
+
+            <button onclick="loadBooks()" class="btn btn-outline-warning ms-2 fs-5" type="button">Search</button>
+        </div>
+
+        <!-- spinner -->
+
+        <div class="d-flex justify-content-center">
+            <div id="spinner" class="spinner-border text-light" role="status">
+                <span  class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        
+        <!-- error mesages and extra messages section -->
+
+        <p class="fw-bold fs-2 text-center text-warning" id="messages"></p>
+        
+        <!-- books result or show -->
+
+        <div id="books" class="row row-cols-1 row-cols-md-4 g-4">
+            
+        </div>
+        
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
